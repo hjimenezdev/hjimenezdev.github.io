@@ -1,13 +1,35 @@
-.wrapper {
+/* 
+Designed by jmcamposdev https://github.com/jmcamposdev 
+*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100vh;
+    width: 100%;
+}
+.wrapper {
+    height: 100%;
     /*This part is important for centering*/
     display: grid;
     place-items: center;
     align-content: center;
     gap: 6em;
   }
+
+  .footer {
+    width: 100%;
+    padding: 2em;
+  }
   
   .typing-demo {
+    color: white;
     width: 22ch;
     animation: typing 2s steps(22), blink .5s step-end infinite alternate;
     white-space: nowrap;
@@ -36,3 +58,53 @@
     align-items: flex-end;
     justify-content: center;
   }
+
+  .gradient-background {
+    background: linear-gradient(117deg,#7365d8,#4a34d0,#4125d8);
+    background-size: 180% 180%;
+    animation: gradient-animation 6s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .typing-cat {
+    position: relative;
+  }
+  .text {
+    position: absolute;
+    left: 60px;
+    top: 20px;
+    color: #B3B0BB;
+    width: 208px;
+    font-size: 9px;
+    font-family: monospace;
+    font-weight: bold;
+    line-height: 12px;
+  }
+  .typed {
+    border-right: 4px solid #B3B0BB;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: type 2s steps(40) 1s alternate infinite,
+               blink 500ms infinite;
+    }
+    @keyframes type {
+      from { width: 0; }
+      to { width: 24em; }
+    }
+    @keyframes blink {
+      0%   { border-right-color: #B3B0BB; }
+      50%  { border-right-color: #B3B0BB; }
+      51%  { border-right-color: transparent; }
+      100% { border-right-color: transparent; }
+    }
