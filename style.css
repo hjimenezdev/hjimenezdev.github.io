@@ -1,12 +1,45 @@
 /* 
 Designed by jmcamposdev https://github.com/jmcamposdev 
 */
+
+/* 
+  General styles
+*/
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+body {
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* 
+  Background styles
+*/
+.gradient-background {
+  background: linear-gradient(117deg,#7365d8,#4a34d0,#4125d8);
+  background-size: 180% 180%;
+  animation: gradient-animation 6s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Main styles */
 .container {
     display: flex;
     flex-direction: column;
@@ -14,6 +47,9 @@ Designed by jmcamposdev https://github.com/jmcamposdev
     height: 100vh;
     width: 100%;
 }
+/* 
+  Main title styles
+*/
 .wrapper {
     height: 100%;
     /*This part is important for centering*/
@@ -23,88 +59,90 @@ Designed by jmcamposdev https://github.com/jmcamposdev
     gap: 6em;
   }
 
-  .footer {
-    width: 100%;
-    padding: 2em;
+
+
+/* 
+  Footer styles
+*/
+.footer {
+  width: 100%;
+  padding: 2em;
+}
+
+.github-icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.github-icon:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+
+
+/* 
+  Typing animation
+  Designed by jmcamposdev
+*/
+.typing-demo {
+  color: white;
+  width: 22ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
   }
-  
-  .typing-demo {
-    color: white;
-    width: 22ch;
-    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid;
-    font-family: monospace;
-    font-size: 2em;
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
   }
-  
-  @keyframes typing {
-    from {
-      width: 0
-    }
+}
+
+
+
+/*
+  Typing Cat animation
+  Designed by jmcamposdev
+*/
+
+.typing-cat {
+  position: relative;
+}
+.text {
+  position: absolute;
+  left: 60px;
+  top: 20px;
+  color: #B3B0BB;
+  width: 208px;
+  font-size: 9px;
+  font-family: monospace;
+  font-weight: bold;
+  line-height: 12px;
+}
+.typed {
+  border-right: 4px solid #B3B0BB;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: type 2s steps(40) 1s alternate infinite,
+              blink 500ms infinite;
   }
-      
+  @keyframes type {
+    from { width: 0; }
+    to { width: 24em; }
+  }
   @keyframes blink {
-    50% {
-      border-color: transparent
-    }
+    0%   { border-right-color: #B3B0BB; }
+    50%  { border-right-color: #B3B0BB; }
+    51%  { border-right-color: transparent; }
+    100% { border-right-color: transparent; }
   }
-
-  body {
-    height: 100vh;
-    background-color: #F4F3F6;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-  }
-
-  .gradient-background {
-    background: linear-gradient(117deg,#7365d8,#4a34d0,#4125d8);
-    background-size: 180% 180%;
-    animation: gradient-animation 6s ease infinite;
-  }
-  
-  @keyframes gradient-animation {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-
-  .typing-cat {
-    position: relative;
-  }
-  .text {
-    position: absolute;
-    left: 60px;
-    top: 20px;
-    color: #B3B0BB;
-    width: 208px;
-    font-size: 9px;
-    font-family: monospace;
-    font-weight: bold;
-    line-height: 12px;
-  }
-  .typed {
-    border-right: 4px solid #B3B0BB;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: type 2s steps(40) 1s alternate infinite,
-               blink 500ms infinite;
-    }
-    @keyframes type {
-      from { width: 0; }
-      to { width: 24em; }
-    }
-    @keyframes blink {
-      0%   { border-right-color: #B3B0BB; }
-      50%  { border-right-color: #B3B0BB; }
-      51%  { border-right-color: transparent; }
-      100% { border-right-color: transparent; }
-    }
