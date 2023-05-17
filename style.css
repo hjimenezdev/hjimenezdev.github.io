@@ -65,8 +65,14 @@ body {
   Footer styles
 */
 .footer {
+  display: flex;
+  gap: 2em;
   width: 100%;
   padding: 2em;
+}
+.footer a {
+  display: flex;
+  align-items: center;
 }
 
 .github-icon {
