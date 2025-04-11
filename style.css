@@ -68,7 +68,6 @@ body {
 
 .github-icon {
   transition: transform 0.3s ease-in-out;
-  color: white;
 }
 
 .github-icon:hover {
@@ -81,7 +80,6 @@ body {
 
 /* 
   Typing animation
-  Designed by jmcamposdev
 */
 .typing-demo {
   color: white;
@@ -110,7 +108,6 @@ body {
 
 /*
   Typing Cat animation
-  Designed by jmcamposdev
 */
 
 .typing-cat {
